@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task2_new
+namespace task2_new_2
 {
     class Program
     {
@@ -54,24 +54,31 @@ namespace task2_new
                     {
                         Console.WriteLine("y не существует");
                     }
+                    if (Math.Round(x, 3) >= -8 - R && Math.Round(x, 3) <= -8 + R)
+                    {
+
+                        double y = Math.Sqrt(Math.Abs(R * R - (x + 8) * (x + 8))) - 2;
+                        Console.WriteLine(Math.Round(y, 3));
+
+                    }
 
 
                 }
 
-                if (Math.Round(R, 3) > 2)
+                if (Math.Round(R, 3) >= 2)
                 {
-                    R = 2;
-                    if (x < -8 - R)
+                    if (x < -10)
                     {
                         Console.WriteLine("y не существует");
                     }
-                }
-                if (x >= -8 - R && x <= -8 + R)
-                {
 
-                    double y = Math.Sqrt(Math.Abs(R * R - (x + 8) * (x + 8))) - 2;
-                    Console.WriteLine(Math.Round(y, 3));
+                    if (Math.Round(x, 3) >= -10 && Math.Round(x, 3) <= -6)
+                    {
 
+                        double y = Math.Sqrt(Math.Abs(R * R - (x + 8) * (x + 8))) - 2;
+                        Console.WriteLine(Math.Round(y, 3));
+
+                    }
                 }
                 if (Math.Round(x, 3) == -6)
                 {
@@ -112,4 +119,4 @@ namespace task2_new
         }
     }
 }
-
+    
